@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react';
+import TodoContainer from './components/TodoContainer';
+import InputForm from './components/InputForm';
 
 const App = () => {
-  return (
-    <div >
-          The basic empty template
-    </div>
-  )
-}
+  const [todoList, setTodoList] = useState([]);
+  const [input, setInput] = useState('');
 
-export default App
+  return (
+    <div>
+      <InputForm
+        input={input}
+        todoList={todoList}
+        setTodoList={setTodoList}
+        setInput={setInput}
+      />
+      <TodoContainer todoList={todoList} setTodoList={setTodoList} />
+    </div>
+  );
+};
+
+export default App;
