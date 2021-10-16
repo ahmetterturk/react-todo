@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const TodoItem = (props) => {
-  const { item, index, todoList, setTodoList, deleteItemHandler } = props;
+  const { item, deleteItemHandler } = props;
 
   return (
     <div>

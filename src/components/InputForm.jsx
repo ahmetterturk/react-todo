@@ -9,12 +9,10 @@ const InputForm = (props) => {
     updatedTodoList.unshift(input);
     setTodoList(updatedTodoList);
     setInput('');
-    // console.log(todoList);
   };
 
   const onChangeHandler = (event) => {
     setInput(event.target.value);
-    // console.log(input);
   };
 
   return (
